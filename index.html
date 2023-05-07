@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <body style="background-image:Duurzaamheidsoverzicht kaal.jpg;">
+    <meta charset="utf-8">
+    <title>Rijksmuseum Duurzaamheidsoverzicht</title>
+    <style>
+    .duurzaamheidsoverzicht {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .container{
+        position: relative;
+        top: 0px;
+        padding: 10px;
+        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        z-index: 9;
+        opacity: 0.8
+     }
+    .item {
+      width: 60px;
+      height: 60px;
+      background: #009578;
+      color: #ffffff;
+      padding: 20px;
+      margin: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 100%;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .item:hover {
+      background:#00866c;
+    }
+    .items-1{
+      position: absolute;
+      top: 100px;
+      right:200px;
+    }
+    .items-2{
+      position: absolute;
+      top: -25px;
+      left: 535px;
+    }
+    .items-3{
+      position: absolute;
+      top: 0px;
+      left:800px;
+    }
+    .items-4{
+      position: absolute;
+      top: 670px;
+      right: 150px;
+    }
+    .items-5{
+      position: absolute;
+      top: 600px;
+      left:475px;
+    }
+    .items-6{
+      position: absolute;
+      top: 100px;
+      left:0px;
+    }
+    .items-7{
+      position: absolute;
+      top:300px;
+      right:50px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="items-1 item" href="transportatie.html">
+        <ion-icon name="airplane-outline" size="large"></ion-icon>
+      </a>
+      <a class="items-2 item" href="Energie.html">
+        <ion-icon name="flash-outline" size="large"></ion-icon>
+      </a>
+      <a class="items-3 item" href="Ventilatie.html">
+        <ion-icon name="cloud-outline" size="large" ></ion-icon>
+      </a>
+      <a class="items-4 item" href="Water.html">
+        <ion-icon name="water-outline" size="large"></ion-icon>
+      </a>
+      <a class="items-5 item" href="Afval.html">
+        <ion-icon name="trash-outline" size="large"></ion-icon>
+      </a>
+     <a class="items-6 item" href="Licht.html">
+      <ion-icon name="flashlight-outline" size="large"></ion-icon>
+    </a>
+    <a class="items-7 item" href="WKO.html">
+     <ion-icon name="thermometer-outline" size="large"></ion-icon>
+   </a>
+    </div>
+
+  <img class=duurzaamheidsoverzicht src="duurzaamheidsoverzicht kaal.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum">
+  <br><br>
+
+  <!--<adress>
+    <br><br>
+    <i>Heleen Hoekstra, Robin Ostelo en Hugo van Dieren</i><br>
+    <i>Metis Montessori Lyceum</i><br>
+    <i>Mauritskade 58 </i><br>
+    <i>April 2023 </i><br>
+  </adress> -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

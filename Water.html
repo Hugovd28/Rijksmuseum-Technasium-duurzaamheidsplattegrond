@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <style>
+    .duurzaamheidsoverzicht {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .rounded-button {
+      position: absolute;
+      left: 15px;
+      width: 1490px;
+      height:60px;
+      background: #0000cd;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 0%;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s;
+      z-index: 9;
+    }
+    .rounded-button:hover {
+      background:#4169e1;
+    }
+    h1 {
+      font-style: oblique;font-family: inherit;font-variant: small-caps;font-size: 60px;
+      color:#0000cd;
+      margin: 15;
+    }
+    .Textvak{
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      width: 600px;
+      height: 665px;
+      opacity: 0.8;
+      font-size: calc(1rem + .125 * ((100vw - 20rem) / 100));
+      line-height: 1.375;
+      margin: 0;
+      font-family: RijksText,Arial,sans-serif;
+      font-weight: 400;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #40474f;
+      z-index: 0;
+      overflow-x: hidden
+    }
+    p{
+      margin: 10px
+    }
+    </style>
+    <html lang="en" dir="ltr">
+      <body  style="background-image:Duurzaamheidsoverzicht kaal.jpg;">
+      </head>
+      <body>
+        <h1>Water</h1>
+      <div>
+        <a class="rounded-button" href="index.html">
+          <ion-icon name="home-outline" size="large"></ion-icon>
+        </a>
+        <img class=duurzaamheidsoverzicht id=duurzaamheidsoverzicht src="duurzaamheidsoverzicht kaal.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum" style="opacity:0.2">
+        <a class="Textvak">
+          <p>Hallo allemaal</p>
+        </a>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ["Jaar", "liter", { role: "style" } ],
+              ["2018", 33204000, "#00008b"],
+              ["2019", 33940000, "#0000cd"],
+              ["2020", 20703000, "#4169e1"],
+              ["2021", 0, "#1e90ff"],
+              ["2022", 0, "#87cefa"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                             { calc: "stringify",
+                               sourceColumn: 1,
+                               type: "string",
+                               role: "annotation" },
+                             2]);
+
+            var options = {
+              title: "Jaarlijks waterverbruik in liter",
+              width: 900,
+              height: 680,
+              bar: {groupWidth: "95%"},
+              legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+        </script>
+      <div id="columnchart_values" style="position: absolute;bottom: 0px; left: 615px;opacity:0.8;"></div>
+      </body>
+</html>

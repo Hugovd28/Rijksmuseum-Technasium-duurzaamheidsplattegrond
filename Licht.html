@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <style>
+    .duurzaamheidsoverzicht {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .rounded-button {
+      position:absolute;
+      width: 1505px;
+      height:60px;
+      background: #009578;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 0%;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s;
+      z-index: 9;
+    }
+    .rounded-button:hover {
+      background:#00866c;
+    }
+    h1 {
+      font-style: oblique;font-family: inherit;font-variant: small-caps;font-size: 60px;
+      color:009578;
+      margin: 15;
+    }
+    .Textvak{
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      width: 600px;
+      height: 665px;
+      opacity: 0.8;
+      font-size: calc(1rem + .125 * ((100vw - 20rem) / 100));
+      line-height: 1.375;
+      margin: 0;
+      font-family: RijksText,Arial,sans-serif;
+      font-weight: 400;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #40474f;
+      z-index: 0;
+      overflow-x: hidden
+    }
+    p{
+      margin: 10px;
+    }
+    </style>
+    <html lang="en" dir="ltr">
+      <body  style="background-image:Duurzaamheidsoverzicht kaal.jpg;">
+      </head>
+      <body>
+        <h1>Verlichting</h1>
+      <div>
+        <a class="rounded-button" href="index.html">
+          <ion-icon name="home-outline" size="large"></ion-icon>
+        </a>
+        <img class= duurzaamheidsoverzicht id=duurzaamheidsoverzicht src="duurzaamheidsoverzicht kaal.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum" style="opacity:0.2">
+        <a class="Textvak">
+          <p>Hallo allemaal</p>
+      </a>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Jaar", "KwH", { role: "style" } ],
+          ["2018", 1044701, "#696969"],
+          ["2019", 398846, "#848482"],
+          ["2020", 285053, "#838996"],
+          ["2021", 0, "#989898"],
+          ["2022", 0, "#bfc1c2"],
+
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+
+        var options = {
+          title: "Jaarlijks energieverbruik van licht-apparatuur in KwH",
+          width: 900,
+          height: 680,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
+  <div id="columnchart_values" style="position: absolute;bottom: 0px; left: 615px;opacity:0.8;"></div>
+      </body>
+</html>
