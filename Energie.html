@@ -25,19 +25,18 @@
       <div>
         <a class="Tekstvak">
           <p>
-            Het Rijksmuseum heeft zichzelf het doel gesteld om de gas- en elektriciteitsverbruik jaarlijks te laten dalen met minstens 2%.
-            Om dit doel te bereiken en de schadelijke effecten van het energieverbruik te reduceren worden duurzame oplossingen, zoals het gebruik van hernieuwbare energiebronnen en de inkoop van duurzame energie, ingezet. 
-          </p>
-          <p>
-             Om de energieconsumptie te laten dalen is vooral ook de inzet van werknemers zeer belangrijk. Het Rijksmuseum erkent dit en neemt daarom een aantal maatregelen om werknemers beter te informeren over de maatregelen die het museum neemt, en vooral ook waarom deze maatregelen genomen worden. 
-             Deze communicatie vindt onder andere plaats via de werkgroepen, intranet, het duurzaamheidsbord en deze website. 
-             Daarnaast registreert en monitort het Rijksmuseum zijn energieconsumptie, zodat er duidelijke cijfers zijn die een goed inzicht geven in het effect van de maatregelen. 
-             Een deel van deze data wordt samengevat in de hiernaast staande grafieken. 
-          </p>
-          <p>
-            Naast het inkopen en gebruiken van duurzame energie en het vergroten van het bewustzijn van werknemers neemt het Rijksmuseum zelf ook een aantal concrete maatregelen om het verbruik te doen afnemen. 
-            Meer over deze maatregelen staat op de pagina's: verlichting, ventilatie en WKO & Koeltoren. 
-          </p>  
+              Het Rijksmuseum heeft zichzelf het doel gesteld om de gas- en elektriciteitsverbruik jaarlijks te laten dalen met minstens 2%.
+            </p>
+            <p>
+               Om de energieconsumptie te laten dalen is de inzet van werknemers zeer belangrijk, daarom neemt het Rijksmuseum een aantal maatregelen om werknemers beter te informeren over de maatregelen die het museum neemt, en vooral ook waarom deze maatregelen genomen worden.
+               Deze communicatie vindt onder andere plaats via de werkgroepen, intranet, het duurzaamheidsbord en deze website.
+               Daarnaast registreert en monitort het Rijksmuseum zijn energieconsumptie, zodat er duidelijke cijfers zijn die een goed inzicht geven in het effect van de maatregelen.
+               Een deel van deze data wordt samengevat in de hiernaast staande grafieken.
+            </p>
+            <p>
+              Naast het inkopen en gebruiken van duurzame energie en het vergroten van het bewustzijn van werknemers neemt het Rijksmuseum zelf ook een aantal concrete maatregelen om het verbruik te doen afnemen.
+              Meer over deze maatregelen staat op de pagina's: verlichting, luchtbehandeling en WKO & Koeltoren.
+            </p>
       </a>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -48,10 +47,9 @@
 
         var data = google.visualization.arrayToDataTable([
           ["Task", "kWh",],
-          ["Verlichting", 2,],
-          ["Temperatuurregeling", 2, ],
-          ["Transporatie", 2, ],
-          ["Overige", 2, ],
+          ["Verlichting", 1857627 ,],
+          ["Luchtbehandeling", 619209, ],
+          ["Overig", 3715255, ],
         ]);
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, {
@@ -73,7 +71,7 @@
       ["2019", 6993619, "#f4ca16"],
       ["2020", 6295553, "#ffe135"],
       ["2021", 6308359, "#f0e130"],
-      ["2022", 6192019, "#fefe22"],
+      ["2022", 6192091, "#fefe22"],
     ]);
     var view = new google.visualization.DataView(data);
     view.setColumns([0, 1,

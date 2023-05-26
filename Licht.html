@@ -24,10 +24,10 @@
         <img class= duurzaamheidsoverzicht id=duurzaamheidsoverzicht src="duurzaamheidsoverzicht.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum" style="opacity:0.2">
         <a class="Tekstvak">
           <p>
-            Het Rijksmuseum wil zijn totale elektriciteitsverbruik omlaag krijgen.
+            Het Rijksmuseum wil zijn totale elektriciteitsverbruik verminderen.
             Een onderdeel daarvan is het energieverbruik van de verlichting.
-            Het Rijksmuseum heeft Philips 3.800 LED-spots en meer dan 1.800 meter LED-verlichting in zijn tachtig zalen laten installeren.
-            Dit is eigenlijk de grootste maatregel met betrekking tot de verlichting, LED-verlichting gebruikt relatief veel minder energie dan andere vormen van verlichting.
+            Het Rijksmuseum heeft 3.800 Philips LED-spots en meer dan 1.800 meter LED-verlichting in zijn tachtig zalen laten installeren.
+            Dit is de grootste maatregel met betrekking tot de verlichting, LED-verlichting gebruikt relatief veel minder energie dan andere vormen voor het regelen van verlichting.
             Daarnaast heeft het museum in 2022 een slimme regeling van de verlichting geïmplementeerd, waardoor de verlichting minder vaak aanstaat.
           </p>
       </a>
@@ -38,11 +38,11 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["Jaar", "kWh", { role: "style" } ],
-          ["2018", 1044701, "#696969"],
-          ["2019", 398846, "#848482"],
-          ["2020", 285053, "#838996"],
-          ["2021", 0, "#989898"],
-          ["2022", 0, "#bfc1c2"],
+          ["2018", 2125622, "#696969"],
+          ["2019", 2098086, "#848482"],
+          ["2020", 1888666, "#838996"],
+          ["2021", 1892508, "#989898"],
+          ["2022", 1857627, "#bfc1c2"],
 
         ]);
 
@@ -55,7 +55,7 @@
                          2]);
 
         var options = {
-          title: "Jaarlijks energieverbruik van licht-apparatuur in kWh",
+          title: "Schatting van het jaarlijks energieverbruik van licht-apparatuur in kWh",
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };

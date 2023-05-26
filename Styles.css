@@ -63,7 +63,7 @@ body{
         align-items: center;
         flex-wrap: wrap;
         z-index: 9;
-        opacity: 0.8
+        opacity: 0.9;
      }
     .item {
       width: 7%;
@@ -116,4 +116,38 @@ body{
       position: absolute;
       top:40%;
       right:3%;
+    }
+    .items-8{
+      position: absolute;
+      top: 83%;
+      left: 3%;
+    }
+    .Tekstvak2{
+      position: absolute;
+      bottom: 1.78%;
+      left: 1%;
+      width: 98%;
+      height: 75%;
+      opacity: 0.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #40474f;
+      z-index: 0;
+      overflow-x: hidden
+    }
+    h2{
+      font-size: calc(1rem + 1 * ((100vw - 20rem) / 100));
+      line-height: 1.375;
+      margin: 2%;
+      font-family: RijksText,Arial,sans-serif;
+      font-weight: 400;
+      color: #fff;
+    }
+    h3{
+      font-size: calc(1rem + 0.125 * ((100vw - 20rem) / 100));
+      line-height: 1.375;
+      margin: 2%;
+      font-family: RijksText,Arial,sans-serif;
+      font-weight: 400;
+      color: #fff;
     }

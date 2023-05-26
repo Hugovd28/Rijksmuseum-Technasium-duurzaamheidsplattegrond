@@ -19,12 +19,13 @@
         <a class="rounded-button" href="index.html">
           <ion-icon name="home-outline" size="large"></ion-icon>
         </a>
+        <img class=duurzaamheidsoverzicht src="duurzaamheidsoverzicht.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum" style="opacity:0.2">
         <a class="Tekstvak">
           <p>
             Het Rijksmuseum maakt gebruik van een WKO (warmte-koudeopslag), die ervoor zorgt dat meerdere bouwdelen verwarmd en gekoeld worden zonder aardgas.
-            Met deze installatie kan het Rijksmuseum restwarmte en restkoelte gebruiken voor verwarming van verschillende gebouwen waaronder het hoofdgebouw, verschillende ateliers en zelfs kantoren.
+            Met deze installatie kan het Rijksmuseum restwarmte en restkoelte gebruiken voor verwarming van verschillende gebouwen waaronder het Hoofdgebouw, Ateliersgebouw en een kantorengebouw.
             Bij de grootscheepse renovaties van het Rijksmuseum tussen 2006 en 2012 werd een ondergrondse warmte- en koudeopslag met drie warmtepompen gerealiseerd.
-            In 2017 en 2021 werden deze systemen door Kuijpers verbeterd en uitgebreid, en ook in de toekomst staan soortgelijke "upgrades" op de planning, om als Rijksmuseum in 2025 volledig aardgasvrij te zijn.
+            In 2017 en 2021 werden deze systemen verbeterd en uitgebreid, en ook in de toekomst staan soortgelijke optimalisaties op de planning, om als Rijksmuseum in 2025 volledig aardgasvrij te zijn.
           </p>
           <p>
             De miljoenen jaarlijkse bezoekers van het Rijksmuseum brengen veel warmte het gebouw in.
@@ -32,7 +33,39 @@
             Door middel van een koeltoren wordt de rest warmte extern verspreid doormiddel van een water/lucht-warmtewisselingsproces. Water stroomt in de toren omlaag en geeft daarbij warmte aan de omgevingslucht, doordat warme watermoleculen aan de waterstroom ontsnappen en met de ventilatielucht worden weggevoerd.
           </p>
       </a>
-        <img class=duurzaamheidsoverzicht src="duurzaamheidsoverzicht.jpg" alt="Duurzaamheidsoverzicht Rijksmuseum" style="opacity:0.2">
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Jaar", "Nm^3", { role: "style" } ],
+          ["2018", 147747, "#696969",],
+          ["2019", 133927, "#848482",],
+          ["2020", 114854, "#838996"],
+          ["2021", 136725, "#989898"],
+          ["2022", 104072, "#bfc1c2"],
+
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+
+        var options = {
+          title: "Jaarlijks gasverbruik in Nm^3",
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+    }
+    </script>
+  <div id="columnchart_values" style="position: absolute; height: 76.78%; width: 59%; top: 23.22%; left: 40%;opacity:0.8;"></div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
       </body>
